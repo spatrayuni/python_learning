@@ -1,0 +1,101 @@
+SMS:
+  Diag:
+    - "https://sms.platform.intuit.net/iep/sms/moservice/diag"
+    - "https://sms.platform.intuit.net/iep/sms/mtservice/diag"
+  HealthCheck:
+    - "https://sms.api.intuit.com/health/full"
+    - "https://sms.api.intuit.net/health/full"
+    - "https://sms.api.intuit.com/iep/sms/moservice/health/full"
+    - "https://sms.platform.intuit.net/iep/sms/mtservice/health/full"
+    - "https://sms.platform.intuit.net/iep/sms/moservice/health/full"
+  AWS:
+    Disabled
+  Hosts:
+    - pprdsmsas300.corp.intuit.net
+    - pprdsmsas301.corp.intuit.net
+    - pprdsmsas302.corp.intuit.net
+    - pprdsmsas303.corp.intuit.net
+    - pprdsmsas418.corp.intuit.net
+    - pprdsmsas419.corp.intuit.net
+    - pprdsmsas420.corp.intuit.net
+    - pprdsmsas421.corp.intuit.net
+  ContextPath:
+    - 20001/iep/sms/moservice/health/full
+    - 20006/iep/sms/mtservice/health/full
+
+Voice:
+  Diag:
+    - "https://voice.api.intuit.com/diag"
+#    - "https://voice-prd.api.intuit.com/diag"
+#    - "https://voice-prd.api.intuit.com/diag"
+#    - "https://voice-prd-qydc.api.intuit.com/diag"
+#    - "https://voice-prd-lvdc.api.intuit.com/diag"
+#    - "https://voice.platform.intuit.net/voice/diag"
+#    - "https://voice-prd-qydc.platform.intuit.net/voice/diag"
+#    - "https://voice-prd-lvdc.platform.intuit.net/voice/diag"
+  HealthCheck:
+    - "https://voice.api.intuit.com/health/full"
+  AWS:
+    Disabled
+  Hosts:
+  ContextPath:
+
+
+DLS:
+  Diag:
+    - "https://dcl.intuit.net/DeviceLifecycleService/health/version"
+  HealthCheck:
+    - "https://devicelifecycle.api.intuit.net/health/full"
+    - "https://dcl.intuit.net/DeviceLifecycleService/health/full"
+  AWS:
+    Disabled
+  Hosts:
+    - "pprddclap302.corp.intuit.net"
+    - "pprddclap303.corp.intuit.net"
+    - "pprddclap304.corp.intuit.net"
+    - "pprddclap305.corp.intuit.net"
+    - "pprddclap402.corp.intuit.net"
+    - "pprddclap403.corp.intuit.net"
+    - "pprddclap404.corp.intuit.net"
+    - "pprddclap405.corp.intuit.net"
+
+PhoneIdentity:
+  Diag:
+    - "https://phoneidentity.api.intuit.com/health/diag"
+  HealthCheck:
+    - "https://phoneidentity.api.intuit.com/health/full"
+  AWS:
+    Enabled
+  ELB:
+    us-west-2:
+      - "pi-prod-el-BlueElb-1FTREN884MBRV"
+      - "phoneidv2-prod-BlueELB"
+      - "tm-prod-bg-BlueElb-173WW9QPAGFFJ"
+      - "mgmt-prd-b-BlueElb-5AMH7KT7G2EW"
+      - "mgmt-service-prod-BlueELB"
+      - "tm-service-prod-BlueELB"
+    us-east-2:
+      - "phoneidv2-east-prod-BlueELB"
+      - "mgmt-service-east-prod-BlueELB"
+      - "tm-service-east-prod-BlueELB"
+
+IPGeocode:
+  Diag:
+    - "https://ipgeocode.api.intuit.com/ipgeocode/rest/diag/ping/deep"
+    - "https://ipgeocode.api.intuit.com/health/full"
+  HealthCheck:
+    - "https://ipgeocode.api.intuit.com/health/full"
+  AWS:
+    Enabled
+  ELB:
+    - "ipgeoprod-BlueElb-ASPLG0MNJZR3"
+
+Geocode:
+  Diag:
+    - "https://geocode.api.intuit.com/health/ping"
+  HealthCheck:
+    - "https://geocode.api.intuit.com/health/full"
+  AWS:
+    Enabled
+  ELB:
+    - "geoprod-BlueElb-SX6FESD4KM91"

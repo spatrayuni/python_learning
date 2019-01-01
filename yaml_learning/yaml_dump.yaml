@@ -1,0 +1,4 @@
+!!python/object/apply:builtins.filter
+- !!python/name:__main__.check ''
+- !!python/object/apply:builtins.iter
+  - []
